@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@model BesSayininToplamiCapimi
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Birinci Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(name => name.Sayi1) </td>
+                </tr>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> İkinci Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(name => name.Sayi2) </td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> Üçüncü Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(name => name.Sayi3) </td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> Dördüncü Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(name => name.Sayi4) </td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> Beşinci Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(name => name.Sayi5) </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Ortalamayı ve Toplamı Ekrana Yazdır" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.MessageToplam</td>
+                    <td>@ViewBag.MessageOrtalama</td>
+
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
